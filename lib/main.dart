@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'home_pages.dart';
+import 'perpustakaan/library_home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Modul3App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Modul3App extends StatelessWidget {
+  const Modul3App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Belajar Navigator',
+      title: 'Perpustakaan Kampus',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff1769d1)),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const LibraryHomePage(),
     );
   }
 }
