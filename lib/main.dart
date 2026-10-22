@@ -1,24 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'perpustakaan/library_home_page.dart';
+import 'modul_06/modul_06_app.dart';
+import 'pengayaan/modul_06/modul_06_pengayaan_app.dart';
 
-void main() {
-  runApp(const Modul3App());
-}
+const bool _pengayaan = bool.fromEnvironment('PENGAYAAN');
 
-class Modul3App extends StatelessWidget {
-  const Modul3App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Perpustakaan Kampus',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff1769d1)),
-        useMaterial3: true,
-      ),
-      home: const LibraryHomePage(),
-    );
-  }
-}
+void main() =>
+    runApp(_pengayaan ? const Modul06PengayaanApp() : const Modul06App());
